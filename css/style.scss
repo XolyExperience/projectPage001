@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	height: 100vh;
+    background: #444;
+	font-family: 'Racing Sans One', cursive;
+}
+
+.splash {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.splashNav {
+	border-radius: 20%;
+	background: rgb(48, 48, 48);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: min-content min-content min-content;
+	.xoly {
+		grid-column: 2 / 3;
+		grid-row: 1 / 2;
+		align-self: center;
+		justify-self: center;
+	}
+	iframe {
+		width: 100vw;
+		max-width: 600px;
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		align-self: center;
+		justify-self: center;
+	}
+	.exp {
+		grid-column: 2 / 3;
+		grid-row: 3 / 4;
+		align-self: center;
+		justify-self: center;
+	}
+    p {
+		color: #FF7900;
+		font-size: 3rem;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+	}
+
+	.bgClear {
+		background: #444;
+		#1 {
+			grid-column: 1 / 2;
+			grid-row: 1 / 2;
+		}
+		#2 {
+			grid-column: 1 / 2;
+			grid-row: 2 / 3;
+		}
+		#3 {
+			grid-column: 1 / 2;
+			grid-row: 3 / 4;
+		}
+		#4 {
+			grid-column: 3 / 4;
+			grid-row: 1 / 2;
+		}
+		#5 {
+			grid-column: 3 / 4;
+			grid-row: 2 / 3;
+		}
+		#6 {
+			grid-column: 3 / 4;
+			grid-row: 3 / 4;
+		}
+	}
+}
+
+header {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.logo {
+	height: min-content;
+	img {
+	width: 25vw;
+	max-width: 300px;
+	}
+}
+
+#photo-logo img {
+	max-width: 5vw;
+}
+
+#coding-logo img {
+	max-width: 4vw;
+}
+
+nav {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+	}
+	li{
+		padding: 1rem;
+	}
+	a {
+		font-family: 'Courier New', Courier, monospace;
+		background-color: #888;
+		color: #222;
+		padding: 0.5rem;
+		border: 1px solid #FF7900;
+		border-radius: 0.9rem;
+		font-size: large;
+		font-weight: 800;
+		text-decoration: none;
+	}
+	a:hover {
+		background-color: #999;
+		color: #333;
+	}
+}
+
+h1 {
+	font-family: 'Courier New', Courier, monospace;
+}
+
+.light-wrapper {
+	background: #888;
+	display: flex;
+	flex-wrap: wrap;
+	.filler {
+		height: 70vh;
+	}
+}
+
+.polaroid {
+    background: rgb(255, 94, 0);
+    padding: 1rem;
+    box-shadow: 0 0.2rem 1.2rem rgba(0, 0, 0, 0.2);
+
+    img{
+    max-width: 100%;
+    height: auto;
+    }
+}
+
+.caption {
+    color: rgb(255, 255, 255);
+    font-size: 1.8rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.item {
+    width: 30%;
+    display: inline-block;
+    margin-top: 2rem;
+    filter: grayscale(100%);
+}
+
+.item .polaroid::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transition: all 0.35s;
+}
+
+.item:nth-of-type(5n+1) {
+    transform: scale(0.8, 0.8) rotate(5deg);
+    transition: all 0.35s;
+}
+
+.item:nth-of-type(5n+1) .polaroid::before {
+    transform: rotate(6deg);
+    height: 20%;
+    width: 47%;
+    bottom: 30px;
+    right: 12px;
+    box-shadow: 0 2.1rem 2rem rgba($color: #000000, $alpha: 0.4);
+}
+
+.item:nth-of-type(5n+2) {
+    transform: scale(0.8, 0.8) rotate(-5deg);
+    transition: all 0.35s;
+}
+
+.item:nth-of-type(5n+2) .polaroid::before {
+    transform: rotate(-6deg);
+    height: 20%;
+    width: 47%;
+    bottom: 30px;
+    right: 12px;
+    box-shadow: 0 2.1rem 2rem rgba($color: #000000, $alpha: 0.4);
+}
+
+.item:nth-of-type(5n+3) {
+    transform: scale(0.8, 0.8) rotate(-3deg);
+    transition: all 0.35s;
+}
+
+.item:nth-of-type(5n+3) .polaroid::before {
+    transform: rotate(-4deg);
+    height: 20%;
+    width: 47%;
+    bottom: 30px;
+    right: 12px;
+    box-shadow: 0 2.1rem 2rem rgba($color: #000000, $alpha: 0.4);
+}
+
+.item:nth-of-type(5n+4) {
+    transform: scale(0.8, 0.8) rotate(3deg);
+    transition: all 0.35s;
+}
+
+.item:nth-of-type(5n+4) .polaroid::before {
+    transform: rotate(4deg);
+    height: 20%;
+    width: 47%;
+    bottom: 30px;
+    right: 12px;
+    box-shadow: 0 2.1rem 2rem rgba($color: #000000, $alpha: 0.4);
+}
+
+.item:nth-of-type(5n+5) {
+    transform: scale(0.8, 0.8) rotate(-2deg);
+    transition: all 0.35s;
+}
+
+.item:nth-of-type(5n+5) .polaroid::before {
+    transform: rotate(-3deg);
+    height: 20%;
+    width: 47%;
+    bottom: 30px;
+    right: 12px;
+    box-shadow: 0 2.1rem 2rem rgba($color: #000000, $alpha: 0.4);
+}
+
+.item:hover{
+    filter: none;
+    transform: scale(1,1) rotate(0deg) !important;
+    transition: all 0.35s;
+}
+
+.item:hover .polaroid::before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    transform: rotate(0deg);
+    height: 90%;
+    width: 90%;
+    bottom: 0%;
+    right: 5%;
+    box-shadow: 0 1rem 3rwm rgba($color: #000000, $alpha: 0.2);
+    transition: all 0.35s;
+}
