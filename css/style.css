@@ -159,15 +159,11 @@ header {
           align-items: center;
 }
 
-.logo {
-  height: -webkit-min-content;
-  height: -moz-min-content;
-  height: min-content;
-}
-
-.logo img {
-  width: 25vw;
-  max-width: 300px;
+.logo svg {
+  width: 80vw;
+  height: 80vw;
+  max-width: 500px;
+  max-height: 500px;
 }
 
 #photo-logo img {
